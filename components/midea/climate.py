@@ -260,4 +260,4 @@ async def to_code(config):
         cg.add(var.set_humidity_setpoint_sensor(sens))
     # Reference the MideaUART library from this repository
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    cg.add_library(None, None, f"file://{repo_root}")
+    cg.add_library("MideaUART", None, f"file://{repo_root}")
