@@ -1,8 +1,6 @@
 #pragma once
-#include <Arduino.h>
+#include "Helpers/Platform.h"
 #include <vector>
-
-class IPAddress;
 
 namespace dudanov {
 namespace midea {

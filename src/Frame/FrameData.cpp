@@ -1,5 +1,7 @@
 #include "Frame/FrameData.h"
+#ifdef ARDUINO
 #include <IPAddress.h>
+#endif
 
 namespace dudanov {
 namespace midea {
