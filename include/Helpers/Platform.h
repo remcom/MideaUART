@@ -39,7 +39,10 @@ class Stream {
   virtual ~Stream() = default;
   virtual int available() = 0;
   virtual int read() = 0;
+  virtual int peek() { return -1; }
+  virtual size_t write(uint8_t data) { return write(&data, 1); }
   virtual size_t write(const uint8_t *data, size_t size) = 0;
+  virtual void flush() {}
 };
 
 // Arduino IPAddress equivalent
