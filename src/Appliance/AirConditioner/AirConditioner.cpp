@@ -172,6 +172,12 @@ void AirConditioner::m_getCapabilities() {
   );
 }
 
+void AirConditioner::m_onRequest(const Frame &frame) {
+  FrameData data = frame.getData();
+  if (data.hasStatus())
+    this->m_readStatus(std::move(data));
+}
+
 void AirConditioner::m_getStatus() {
   QueryStateData data{};
   LOG_D(TAG, "Enqueuing a GET_STATUS(0x41) request...");
