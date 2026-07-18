@@ -1,6 +1,6 @@
 #pragma once
-#include "Helpers/Platform.h"
-#include "Frame/FrameData.h"
+#include "Platform.h"
+#include "FrameData.h"
 
 namespace dudanov {
 namespace midea {

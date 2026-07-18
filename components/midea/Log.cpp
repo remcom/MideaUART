@@ -1,5 +1,5 @@
-#include "Helpers/Log.h"
-#include "Helpers/Logger.h"
+#include "Log.h"
+#include "Logger.h"
 
 namespace dudanov {
 

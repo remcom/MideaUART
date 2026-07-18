@@ -1,5 +1,5 @@
-#include "Helpers/Platform.h"
-#include "Helpers/Timer.h"
+#include "Platform.h"
+#include "Timer.h"
 
 namespace dudanov {
 

@@ -1,7 +1,7 @@
 #pragma once
 
 // MideaUART
-#include "Appliance/AirConditioner/AirConditioner.h"
+#include "AirConditioner.h"
 
 #include "appliance_base.h"
 #include "esphome/components/sensor/sensor.h"

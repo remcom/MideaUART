@@ -1,8 +1,8 @@
 #pragma once
 
 // MideaUART
-#include "Appliance/ApplianceBase.h"
-#include "Helpers/Logger.h"
+#include "ApplianceBase.h"
+#include "Logger.h"
 
 #include "esphome/core/defines.h"
 #include "esphome/core/component.h"

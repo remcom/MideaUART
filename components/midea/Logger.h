@@ -1,5 +1,5 @@
 #pragma once
-#include "Helpers/Platform.h"
+#include "Platform.h"
 #include <cstdarg>
 #include <functional>
 

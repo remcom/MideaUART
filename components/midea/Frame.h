@@ -1,8 +1,8 @@
 #pragma once
-#include "Helpers/Platform.h"
+#include "Platform.h"
 #include <vector>
-#include "Frame/FrameData.h"
-#include "Helpers/Helpers.h"
+#include "FrameData.h"
+#include "Helpers.h"
 
 namespace dudanov {
 namespace midea {
