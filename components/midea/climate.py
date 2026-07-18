@@ -1,5 +1,3 @@
-import os
-
 from esphome import automation
 import esphome.codegen as cg
 from esphome.components import climate, remote_transmitter, sensor, uart
@@ -258,6 +256,3 @@ async def to_code(config):
     if CONF_HUMIDITY_SETPOINT in config:
         sens = await sensor.new_sensor(config[CONF_HUMIDITY_SETPOINT])
         cg.add(var.set_humidity_setpoint_sensor(sens))
-    # Reference the MideaUART library from this repository
-    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    cg.add_library("MideaUART", None, f"file://{repo_root}")

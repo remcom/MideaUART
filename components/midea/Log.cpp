@@ -1,0 +1,29 @@
+#include "Helpers/Log.h"
+#include "Helpers/Logger.h"
+
+namespace dudanov {
+
+LoggerFn logger_;
+void setLogger(LoggerFn logger) { logger_ = logger; }
+
+void sv_log_printf_(int level, const char *tag, int line, const char *format, ...) {
+  if (logger_ == nullptr)
+    return;
+  va_list arg;
+  va_start(arg, format);
+  logger_(level, tag, line, format, arg);
+  va_end(arg);
+}
+
+#ifdef ARDUINO
+void sv_log_printf_(int level, const char *tag, int line, const __FlashStringHelper *format, ...) {
+  if (logger_ == nullptr)
+    return;
+  va_list arg;
+  va_start(arg, format);
+  logger_(level, tag, line, reinterpret_cast<const char *>(format), arg);
+  va_end(arg);
+}
+#endif
+
+}  // namespace dudanov
